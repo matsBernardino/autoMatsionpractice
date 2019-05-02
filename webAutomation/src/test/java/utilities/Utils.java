@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -34,7 +35,8 @@ public abstract class Utils {
 	}
 
 	public void focar(WebElement elemento) {
-		actions.moveToElement(elemento).build().perform();
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elemento);
+		actions.moveToElement(elemento).perform();
 	}
 
 	/**
@@ -138,6 +140,19 @@ public abstract class Utils {
 	public WebElement esperarSerClicavel(By by, int timeout) {
 		WebElement element = (new WebDriverWait(driver, timeout)).until(ExpectedConditions.elementToBeClickable(by));
 		return element;
+	}
+
+	/**
+	 * Retorna o verdadeiro se ele for clicavel dentro de um tempo definindo
+	 * 
+	 * @param by      By
+	 * @param timeout int
+	 * @return WebElement
+	 */
+	public Boolean esperarSerClicavel(WebElement elemento, int timeout) {
+		WebElement result = null;
+		result = new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(elemento));
+		return result != null ? true : false;
 	}
 
 	/**
