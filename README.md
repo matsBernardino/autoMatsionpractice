@@ -1,26 +1,27 @@
 # autoMatsionpractice
 
 # Configurações
- - _Realizar importação via maven project_
+ - _Realizar importação como maven project_
  - _Para alterar informações utilizadas no teste use a planilha_
 `src/test/resources/Features/DataProvider.xlsx`
 
 # Tecnologias:
 
-  - Selenium Web Driver
-  - Java
-  - Cucumber
-  - Junit
+  - _Selenium Web Driver_
+  - _Java_
+  - _Cucumber_
+  - _Junit_
 
 # Funcionalidades Testadas:
-  - Realizar Compra com Sucesso via transferencia
-  - Realizar Compra com Sucesso via cheque
-> As features estão em `src/test/resources/Features/`
+  - _Realizar Compra com Sucesso via transferencia_
+  - _Realizar Compra com Sucesso via cheque_
+
+ _As features estão em:_ `src/test/resources/Features/`
 
 # Execução:
 
  - _Para executar a sequencia de testes vá até a classe_
 `src/test/java/testRunner/Runner.java`
- - _E execute como **Junit Test**_
-- **ANTES DE EXECUTAR FECHAR A PLANILHA**
+ - _Execute como **Junit Test**_
+ - **ANTES DE EXECUTAR FECHAR A PLANILHA**
  
