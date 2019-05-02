@@ -1,6 +1,6 @@
-Feature: 001 - Realizar Compra com Sucesso 
-	Pagamento via transferencia
-Scenario: 001 - Realizar Compra com Sucesso 
+Feature: 002 - Realizar Compra com Sucesso 
+	Pagamento via Cheque
+Scenario: 002 - Realizar Compra com Sucesso 
 
 	Given acesso o site 
 	And escolho o produto 
@@ -11,6 +11,6 @@ Scenario: 001 - Realizar Compra com Sucesso
 	And valido se o endereco esta correto 
 	And aceito os termos de servico 
 	And valido o valor total da compra 
-	And seleciono o metodo de pagamento por transferencia 
+	And seleciono o metodo de pagamento por cheque 
 	And confirmo a compra 
-	Then valide se foi finalizada com sucesso via transferencia
+	Then valide se foi finalizada com sucesso via check
