@@ -2,7 +2,7 @@
 # Configurações
  - _Realizar importação como maven project_
  - _Para alterar informações utilizadas no teste use a planilha:_
-`src/test/resources/Features/DataProvider.xlsx`
+`src/test/resources/DataProvider.xlsx`
  - _Projeto configurado para **Firefox**_
 # Tecnologias:
   - _Selenium Web Driver_
