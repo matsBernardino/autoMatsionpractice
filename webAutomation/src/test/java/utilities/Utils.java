@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -34,7 +35,8 @@ public abstract class Utils {
 	}
 
 	public void focar(WebElement elemento) {
-		actions.moveToElement(elemento).build().perform();
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elemento);
+		actions.moveToElement(elemento).perform();
 	}
 
 	/**
@@ -141,7 +143,22 @@ public abstract class Utils {
 	}
 
 	/**
-	 * Retorna o elemento se ele estiver presente dentro de um tempo padrao
+	 * <<<<<<< HEAD ======= Retorna o verdadeiro se ele for clicavel dentro de um
+	 * tempo definindo
+	 * 
+	 * @param by      By
+	 * @param timeout int
+	 * @return WebElement
+	 */
+	public Boolean esperarSerClicavel(WebElement elemento, int timeout) {
+		WebElement result = null;
+		result = new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(elemento));
+		return result != null ? true : false;
+	}
+
+	/**
+	 * >>>>>>> 1254f266eae0345b25f352ed50731a06c42e7bcf Retorna o elemento se ele
+	 * estiver presente dentro de um tempo padrao
 	 * 
 	 * @param by By
 	 * @return WebElement
